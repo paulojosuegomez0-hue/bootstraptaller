@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller DOM y Bootstrap - Fútbol</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body class="bg-dark text-light py-4">
+
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-warning">⚽ Centro de Control del Partido</h1>
+            
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-12 col-lg-6">
+                <div class="card bg-secondary bg-opacity-10 border-success h-100 shadow">
+                    <div class="card-header bg-success text-white fw-bold">
+                        Tablero de Estado
+                    </div>
+                    <div class="card-body text-light">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <button id="btn-disponible" type="button" class="btn btn-success fw-semibold">Disponible</button>
+                            <button id="btn-pausa" type="button" class="btn btn-warning text-dark fw-semibold">En pausa</button>
+                            <button id="btn-ocupado" type="button" class="btn btn-danger fw-semibold">Ocupado</button>
+                        </div>
+
+                        <div class="p-3 rounded bg-dark border border-secondary">
+                            <p id="tablero-estado" class="mb-0 fs-5 fw-semibold text-white">Estado actual: Sin seleccionar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-12 col-lg-6">
+                <div class="card bg-secondary bg-opacity-10 border-primary h-100 shadow">
+                    <div class="card-header bg-primary text-white fw-bold">
+                       Visor de Tarjetas de Fútbol
+                    </div>
+                    <div class="card-body text-light">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <button id="btn-delantero" type="button" class="btn btn-info text-dark fw-semibold">Goleador #9</button>
+                            <button id="btn-mediocampo" type="button" class="btn btn-light text-dark fw-semibold">Creador #10</button>
+                            <button id="btn-portero" type="button" class="btn btn-warning text-dark fw-semibold">Arquero #1</button>
+                            <button id="btn-limpiar-visor" type="button" class="btn btn-outline-danger fw-semibold">Limpiar Visor</button>
+                        </div>
+
+                        <div id="visor-tarjetas" class="p-3 rounded bg-dark border border-secondary min-vh-25"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
